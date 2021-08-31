@@ -1,18 +1,31 @@
 # csh-react-lib
 CSH Themed React Library to make frontend applications easier to stand-up.
 
-## Installation
+## Overview 
+This is written using React, and *INSERT HERE WHAT EXISTING LIB WILL BE USED* with styling from Sass
+
+## Usage of the library
+### Installation
 ```sh
 npm install csh-react-lib
 ```
 
-## Usage
+Using the library would look something like this:
+
 ```js
 import { Button } from 'csh-react-lib';
 ...
 
 <Button kind="primary" onClick={() => console.log('Hello World'))} />
 ```
+
+## Local Development
+
+### Prerequesites
+- Node [found here](https://nodejs.org/en/download/)
+
+### Testing a newly created component
+*THIS WILL BE UPDATED ONCE A PATTERN IS DEVELOPED*
 
 ## Current Component Road Map:
 - [ ] Buttons
