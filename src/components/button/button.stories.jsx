@@ -1,40 +1,26 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import Button from '.';
 
 export default {
   title: 'Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 };
 
-const Template = (args) => <Button {...args} />;
+// eslint-disable-next-line react/prop-types
+let Template = ({ children, ...args }) => <Button {...args}>{children}</Button>;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'My Button',
+  children: 'Default Button',
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
-  variant: 'primary',
-  label: 'Primary Button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+Template = () => (
+  <>
+    <Button variant="text">Text</Button>
+    <Button variant="contained">Contained</Button>
+    <Button variant="outlined">Outlined</Button>
+  </>
+);
+export const Variants = Template.bind({});
+Variants.args = {};
